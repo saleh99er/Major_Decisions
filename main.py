@@ -1,6 +1,7 @@
+import questions
 #backbone of app
 print "WIP"
-
+valReceived = []
 #initialize Major Decisions
 
 
@@ -13,7 +14,7 @@ print "WIP"
 #first question: What is their intended major then calculates with this
 # and moves on to next one if answer is valid otherwise requires a new response
 # Info extracted from this, length of the string they gave ranging from 3 to 16
-
+valReceived.append(questions.intendedMajorQ())
 
 
 #second question: What state do they live in
