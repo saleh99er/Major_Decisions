@@ -1,9 +1,18 @@
 import questions
+from appar import gui
+
+
 #backbone of app
 print "WIP"
-valReceived = []
-#initialize Major Decisions
 
+
+
+#initialize Major Decisions
+valReceived = []
+app = gui()
+app.addLabel("welcome","Welcome to... \n Major Decisions!")
+app.addButton("Start", firstQ)
+app.addButton("Quit", endIt)
 
 
 #start page "Major Decisions" with two buttons to start and quit it
@@ -14,8 +23,9 @@ valReceived = []
 #first question: What is their intended major then calculates with this
 # and moves on to next one if answer is valid otherwise requires a new response
 # Info extracted from this, length of the string they gave ranging from 3 to 16
-input = "TEMP"
-valReceived.append(questions.intendedMajorQ(input))
+def firstQ():
+    input = "TEMP"
+    valReceived.append(questions.intendedMajorQ(input))
 
 
 #second question: What state do they live in
@@ -33,4 +43,13 @@ valReceived.append(questions.intendedMajorQ(input))
 
 
 
-#third question:
+#third question: blah blah blah
+
+
+
+#end the app
+def endIt():
+    del app
+
+#run the app
+app.go()
