@@ -4,8 +4,8 @@
 # your compiler, may be different so it's best if you don't get this file in the first place and compile it yourself
 
 
-appJar/*.
-
+appJar/*.pyc
+*.pyc
 
 #another note, even though Python is an "interpretter language" it doesn't run enitrely off your scripts, it makes pyc files for
 #quicker run's of functions gsimilar to cache
