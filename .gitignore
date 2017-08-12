@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+# git ignore allows us to not share certain files that are unncessary or potentially harmful to give
+# below I used gitignore of all of appJar's pyc files b/c those are compiled versions of python that are meant to run on my computer,
+# your compiler, may be different so it's best if you don't get this file in the first place and compile it yourself
+
+
+appJar/*.
+
+
+#another note, even though Python is an "interpretter language" it doesn't run enitrely off your scripts, it makes pyc files for
+#quicker run's of functions gsimilar to cache
