@@ -6,7 +6,7 @@
 def intendedMajorQ():
   """The first question asks the user for their intended major, and if the inptu is valid, stores the length of the string as a value"""
   major= raw_input("What is your intended major? ")
-  if len(major)>0 and major.isalpha():
+  if len(major)>0 :
     value_1=len(major)
   else:
     print "This is not a valid major. Please enter a valid one"
