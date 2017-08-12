@@ -1,18 +1,10 @@
 import questions
-from appar import gui
+from appJar import gui
 
 
 #backbone of app
 print "WIP"
 
-
-
-#initialize Major Decisions
-valReceived = []
-app = gui()
-app.addLabel("welcome","Welcome to... \n Major Decisions!")
-app.addButton("Start", firstQ)
-app.addButton("Quit", endIt)
 
 
 #start page "Major Decisions" with two buttons to start and quit it
@@ -48,8 +40,16 @@ def firstQ():
 
 
 #end the app
-def endIt():
-    del app
+def endIt(button):
+    if button == "Quit":
+        del app
+
+#initializes Major Decisions
+valReceived = []
+app = gui()
+app.addLabel("welcome","Welcome to... \n Major Decisions!")
+app.addButton("Start", firstQ)
+app.addButton("Quit", endIt)
 
 #run the app
 app.go()
