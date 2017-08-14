@@ -1,6 +1,7 @@
 #Script Descritption:
   #This script is meant to be place into any function that uses a raw_input.
   #This script check that there is no numbers withi the input and that it is a string.
+  # Look at "intendedMajorQ.py" for an example.
 #We start by assuming that there is no numbers witin the string nd that the input is a string.
 noNumbers=True
 
@@ -13,7 +14,11 @@ for i in range(len(INPUT)):
       noNumbers = False
 
 if noNumbers == False:
-  print "There are no majors that exist that have numbers in them. Please enter a valid major."
+  print "Whatever Statment that you want if there are numbers(string) within the string"
 # The final cehck, if the input passes this, a value for the input is returned. 
 if noNumbers==True and type(INPUT)==str and len(INPUT)>0:
-  validInput=len(INPUT) 
+  validInput=len(INPUT)
+  print "Whatever statement you want"
+else:
+  print "Whatever statement you want"
+  validInput = # Use a recurive statement
