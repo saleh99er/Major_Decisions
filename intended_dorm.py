@@ -1,6 +1,13 @@
 from random import randint
 def intended_dorm():
   dorm = raw_input("What is the name of your dorm for the academic school-year in Cornell")
+  YOU CAN NOT SET THESE VARIABLES LIKE THIS, YOU CAN INSTEAD SET THEM EQUAL TO A LIST AND DO A QUICK COMPARISON
+  I RECOMMEND THAT EACH HALL HAS A LIST OF ITS NICKNAMES OR ALIASES AND ALL OF THESE LISTS ARE STORED IN A LIST,
+  THEN GO THROUGH EACH OF THESE LISTS AND SEE IF A MATCH IS MADE, ALSO TO MAKE THIS EASIER YOU CAN "CAST" ALL INPUTS
+  to lowercase so You dont need to worry about 'High Rise' or 'High rise' that way you dont need to write in the conditional either
+
+  what these variables you wrote are a logical or operator on two string literals so it will spring an error before you let go of
+  the enter key. I dont mean to be mean I swear I just want you guys to know.
   a = 'Mews' or 'Mews Hall'
   b = 'Townhouse' or 'Townhouse Community'
   c = 'Balch' or 'Balch Hall'
@@ -11,6 +18,9 @@ def intended_dorm():
   h = 'low rise' or 'Low Rise' or 'Low-rise #6'  or 'Low-Rise #6' or 'low rise #6' or 'Low Rise #6' or 'Low-rise #6' or 'Low-Rise #6' 
   i = 'Low-rise #7'  or 'Low-Rise #7' or 'low rise #7' or 'Low Rise #7' or 'Low-rise #7' or 'Low-Rise #7'
   j = 'Mary Donlon' or 'Mary Donlon Hall' or 'Mary' or 'Mary Hall' or 'Donlon' or 'Donolon Hall'
+
+  also I thought we were summing decimals less than one and then using a decimal as a multiplier to determine the index of a list of majors
+  these are ints, please fix this or let me know of the new change. 
   if dorm == a or a.lower() or a.upper():
     return randint(1,10) 
   elif dorm == b or b.lower() or b.upper():
@@ -33,5 +43,6 @@ def intended_dorm():
     return randint(111,120)
   else:
     print 'invalid response'
+    also a loop is needed so they can reenter the data
     
     

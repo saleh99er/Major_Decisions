@@ -6,6 +6,7 @@
 
 appJar/*.pyc
 *.pyc
+.idea
 
 #another note, even though Python is an "interpretter language" it doesn't run enitrely off your scripts, it makes pyc files for
 #quicker run's of functions gsimilar to cache
