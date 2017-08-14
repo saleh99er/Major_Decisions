@@ -31,7 +31,7 @@ def intendedMajorQ():
     validInput=len(major)
     print "DEBUG: this is a valid major, calculating"
   else:
-    print "This is not a valid major. Please enter a valid one." #THIS DOES NOT ALLOW THE USER TO PUT IN A NEW VALID ONE, IMPLEMENT A WHILE LOOP
+    print "This is not a valid major. Please enter a valid one."
     validInput = intendedMajorQ()
   if validInput <= 3 or validInput >= 16:
     Back_up_value=randint(3,16) #IF your going to have random values between 3 and 16 (inclusive) then you need a condition that states 3 and 16 are valid numbers
@@ -41,7 +41,3 @@ def intendedMajorQ():
   else:
     print "DEBUG: returning proper value " + str(validInput)
     return validInput
-
-
-#testing
-intendedMajorQ()
