@@ -4,14 +4,14 @@ def intended_dorm():
   dorm = dorm.lower()
   a = ['mews','mews hall']
   b = ['townhouse','townhouse community']
-  c = ['balch','balch Hall']
+  c = ['balch','balch hall']
   d = ['clara dickson','clara dickson hall']
   e = ['bauer','court-kay-bauer','court kay bauer','court-kay-bauer hall','court kay bauer hall']
   f = ['high rise','high rise','high rise #5','high rise #5']
-  g = ['jameson','jameson Hall']
+  g = ['jameson','jameson hall']
   h = ['low rise','low rise','low-rise #6','low-rise #6','low rise #6','low rise #6','low-rise #6','low-rise #6']
-  i = ['Low-rise #7','Low-Rise #7','low rise #7','low rise #7','low-rise #7','low-rise #7']
-  j = ['mary Donlon','mary donlon hall','mary','mary hall','donlon','donolon hall']
+  i = ['low-rise #7','low-rise #7','low rise #7','low rise #7','low-rise #7','low-rise #7']
+  j = ['mary donlon','mary donlon hall','mary','mary hall','donlon','donolon hall']
 
   if dorm == a:
     return random()*1
