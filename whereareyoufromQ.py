@@ -25,13 +25,13 @@ def whereareyoufromQ():
         return output
   #The output value is just for the sake of testing
   elif America_or_nah=="N" or America_or_nah=="No" or America_or_nah=="n":
-    country_of_origin= raw_input("Where are you from?")
+    country_of_origin= raw_input("Great! An international student! What is your country of origin?")
     noNumbers=True
     for i in range(len(country_of_origin)):
       for j in range(10):
         if state[i]==str(j):
           noNumbers = False
-        
+    #Again, should I add a list of countries? I'm probably going to still it from somewhere on the internet, not make it myself.    
     if noNumbers == False:
       print "%s not a valid country. Please enter a valid one " % country_of_origin
       output=whereareyoufromQ()
