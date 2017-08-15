@@ -2,7 +2,8 @@ def whereareyoufromQ():
   #THE REASON WHY I ADDED COMMENTS FOR WHAT I SHOULD DO INSTEAD OF JUST DOING IT IS BECAUSE I NEED TO MAKE SURE WERE ON THE SAME PAGE ESPECIALLY SINCE YOUR'RE DOING THE GUI
     #NOT YELLING JUST THOUGHT THAT THIS IS IMPORTANT TO READ
   
-  #At the get-go, we are going to determine whether the user is from America or not. 
+  #At the get-go, we are going to determine whether the user is from America or not.
+  #v I love this variable
   America_or_nah=raw_input("Do you come from a state in America? (Y/N): ")
   #If he/she is from America, then we ask what state they are from and get an return value from that.
   if America_or_nah=="Y" or America_or_nah=="Yes" or America_or_nah=="y":
