@@ -21,6 +21,7 @@ class App(Pages):
         Pages.__init__(self)
         self.data = ['ans1','ans2a','ans2b','ans3']
         self.gui = gui()
+        self.answer = None
 
     def openWindow(self):
         if(self.currentPage == 0):
@@ -37,9 +38,6 @@ class App(Pages):
             fifthPage() #Results page
         else:
             print "ERROR"
-            self.currentPage = self.currentPage -1
-        #now adds a page
-        self.nextPage()
 
 def press(button): #Change this function later, bugs present, can't access the variable in line 3 which I'm trying to use on line 11,12,16,17 and 19
     if button == "Quit":
@@ -53,6 +51,10 @@ def press(button): #Change this function later, bugs present, can't access the v
         majorDecisions.gui.stop()
         majorDecisions.nextPage()
         majorDecisions.openWindow()
+    elif button == "Try Again?":
+        majorDecisions.gui.stop()
+        majorDecisions.reset()
+        majorDecisions.openWindow()
 
     #Just for question 2
     elif button == "Yes":
@@ -61,7 +63,8 @@ def press(button): #Change this function later, bugs present, can't access the v
         secondPageCountry()
 
 def welcomeMenu():
-    app = gui()
+    majorDecisions.gui = gui()
+    app = majorDecisions.gui
     app.startLabelFrame("Welcome Menu")
     app.setFont(20)
     app.addLabel("t1","Welcome to...\n Major Decisions", 0, 0)
@@ -88,18 +91,22 @@ def secondPage():
     app.setFont(20)
     app.addLabel('q2', '2. Do you reside in the US?')
     app.addButtons(['Yes','No'], press)
+    app.stopLabelFrame()
     app.go()
 
 
 def secondPageUS():
     app = majorDecisions.gui
+    app.startLabelFrame("Second Question cont. (State)")
     app.addLabel("stateQ","Which state are you from?")
     app.addEntry('e2a')
     app.addButtons(['Quit','Next'],press)
     app.stopLabelFrame()
 
+
 def secondPageCountry():
     app = majorDecisions.gui
+    app.startLabelFrame("Second Question cont. (Country)")
     app.addLabel('countryQ', "Which country are you from?")
     app.addEntry('e2b')
     app.addButtons(['Quit','Next'],press)
@@ -113,22 +120,42 @@ def thirdPage():
     app.addEntry('e3')
     app.addButtons(['Quit','Next'],press)
     app.stopLabelFrame()
+    app.go()
 
 def fourthPage():
     majorDecisions.gui = gui()
-    app =  majorDecisions.gui
+    app = majorDecisions.gui
     app.startLabelFrame("Calculating")
     app.addLabel('calc','Calculating...\nplease wait')
+    print "DEBUG: Calculating..."
+    app.stopLabelFrame()
+    app.go()    #BUG currently show above until waitTime below is done, then show bottom portion for a second and move on to the final page
+                #WILL FIX TOMORROW
+
     waitTime = random.randint(3,15)
+    print "DEBUG: waiting " + str(waitTime) + " seconds"
     time.sleep(waitTime)
+
+    majorDecisions.gui = gui()
+    app = majorDecisions.gui
     app.addLabel('done','Calculation done')
+    app.go()
+
     time.sleep(1)
+    #onto the final page
     majorDecisions.nextPage()
     majorDecisions.openWindow()
 
 def fifthPage():
-    a
-
+    majorDecisions.gui = gui()
+    app = majorDecisions.gui
+    app.startLabelFrame("Results")
+    app.addLabel("suspension",'The major decided by our patented algorithm is...')
+    app.go()
+    time.sleep(5)
+    app.addLabel('answer',majorDecisions.answer)
+    app.addButtons(["Try Again?","Quit"],press)
+    app.go()
     # entry1 = app.getEntry('e1')
     # print "DEBUG: entry1 is " + entry1 #current issue entry1 is returned as an empty string
     # print entry1                        #FIX LATER
