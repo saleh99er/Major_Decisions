@@ -7,8 +7,10 @@ class Pages(object):
     def __init__(self):
         self.currentPage = 0
 
+
     def nextPage(self):
         self.currentPage = self.currentPage + 1
+
 
     def reset(self):
         #not neccessary, optional
@@ -39,6 +41,7 @@ class App(Pages):
         else:
             print "ERROR"
 
+
 def press(button): #Change this function later, bugs present, can't access the variable in line 3 which I'm trying to use on line 11,12,16,17 and 19
     if button == "Quit":
         print "Exiting"
@@ -64,6 +67,8 @@ def press(button): #Change this function later, bugs present, can't access the v
 
     else:
         print "ERROR with press function"
+
+
 def welcomeMenu():
     majorDecisions.gui = gui()
     app = majorDecisions.gui
@@ -75,6 +80,7 @@ def welcomeMenu():
     #runs the app
     app.go()
 
+
 def firstPage():
     majorDecisions.gui = gui()
     app = majorDecisions.gui
@@ -85,6 +91,7 @@ def firstPage():
     app.addButtons(['Quit','Next'],press)
     app.stopLabelFrame()
     app.go()
+
 
 def secondPage():
     majorDecisions.gui = gui()
@@ -183,7 +190,6 @@ def fifthPagePartTwo():
     # print "DEBUG: entry1 is " + entry1 #current issue entry1 is returned as an empty string
     # print entry1                        #FIX LATER
 
-#I think multithreading is needed now so sleep and active can both occur at once, otherwise idk
 
 #SCRIPT CODE -
 majorDecisions = App()
