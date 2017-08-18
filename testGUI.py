@@ -1,7 +1,7 @@
 from appJar import gui
 import time
 import random
-
+import threading
 
 class Pages(object):
     def __init__(self):
@@ -42,7 +42,7 @@ class App(Pages):
 def press(button): #Change this function later, bugs present, can't access the variable in line 3 which I'm trying to use on line 11,12,16,17 and 19
     if button == "Quit":
         print "Exiting"
-        majorDecisions.gui.stop()
+        exit()
     elif button == "Start":
         majorDecisions.gui.stop()
         majorDecisions.nextPage()
@@ -62,6 +62,8 @@ def press(button): #Change this function later, bugs present, can't access the v
     elif button == "No":
         secondPageCountry()
 
+    else:
+        print "ERROR with press function"
 def welcomeMenu():
     majorDecisions.gui = gui()
     app = majorDecisions.gui
@@ -112,6 +114,7 @@ def secondPageCountry():
     app.addButtons(['Quit','Next'],press)
     app.stopLabelFrame()
 
+
 def thirdPage():
     majorDecisions.gui = gui()
     app = majorDecisions.gui
@@ -122,44 +125,65 @@ def thirdPage():
     app.stopLabelFrame()
     app.go()
 
+
 def fourthPage():
+    a = threading.Thread(target=fourthPagePart1) #calculating...
+    b = threading.Thread(target=fourthPagePart2) #calculation done
+    a.start()
+    waitTime = random.randint(3,15)
+    print "DEBUG: waiting " + str(waitTime) + " seconds"
+    time.sleep(waitTime)
+    b.start()
+
+
+def fourthPagePart1():
     majorDecisions.gui = gui()
     app = majorDecisions.gui
     app.startLabelFrame("Calculating")
     app.addLabel('calc','Calculating...\nplease wait')
     print "DEBUG: Calculating..."
     app.stopLabelFrame()
-    app.go()    #BUG currently show above until waitTime below is done, then show bottom portion for a second and move on to the final page
-                #WILL FIX TOMORROW
-
-    waitTime = random.randint(3,15)
-    print "DEBUG: waiting " + str(waitTime) + " seconds"
-    time.sleep(waitTime)
-
-    majorDecisions.gui = gui()
-    app = majorDecisions.gui
-    app.addLabel('done','Calculation done')
     app.go()
 
-    time.sleep(1)
-    #onto the final page
-    majorDecisions.nextPage()
-    majorDecisions.openWindow()
+
+def fourthPagePart2():
+    app = majorDecisions.gui
+    app.addLabel('done','\n\nCalculation done')
+    print "DEBUG: closing fourth page"
+    app.addButtons(['Quit','Next'],press) #APP STOPS RESPONDING HERE
+
 
 def fifthPage():
+    print 'DEBUG: made it to the fifth page'
+    a = threading.Thread(target=fifthPagePartOne) #suspension
+    b = threading.Thread(target=fifthPagePartTwo) #reveal answer
+    print 'DEBUG: starting part one'
+    a.start()
+    time.sleep(5)
+    print 'DEBUG: starting part two'
+    b.start()
+
+
+def fifthPagePartOne():
+    time.sleep(1)
     majorDecisions.gui = gui()
     app = majorDecisions.gui
-    app.startLabelFrame("Results")
+    app.startLabelFrame("(Drum roll please)")
     app.addLabel("suspension",'The major decided by our patented algorithm is...')
+    app.stopLabelFrame()
     app.go()
-    time.sleep(5)
+
+
+def fifthPagePartTwo():
+    app = majorDecisions.gui()
     app.addLabel('answer',majorDecisions.answer)
     app.addButtons(["Try Again?","Quit"],press)
-    app.go()
+    #app.go()
     # entry1 = app.getEntry('e1')
     # print "DEBUG: entry1 is " + entry1 #current issue entry1 is returned as an empty string
     # print entry1                        #FIX LATER
 
+#I think multithreading is needed now so sleep and active can both occur at once, otherwise idk
 
 #SCRIPT CODE -
 majorDecisions = App()
