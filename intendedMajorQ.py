@@ -7,7 +7,8 @@ def intendedMajorQ():
   if noNumbers==True:
     #A value between 0 and .6 will be generated
     validInput=len(major)
-    print "DEBUG: this is a valid major, calculating"
+    for i in range(4):
+      print "Calculating Value...\n" 
   else:
     print "This is not a valid major. Please enter a valid one."
     valid_major=raw_input("What is your intended Major? ")
