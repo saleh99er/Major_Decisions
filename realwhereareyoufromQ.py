@@ -1,5 +1,7 @@
 from random import uniform
-from Input_Checker import Input_Checker 
+from Input_Checker import Input_Checker
+from realwhereareyoufromQ import realwhereareyoufromQ
+
 #CHANGE MAKE THE Is_US set to to True False/. Do Smart list 
 def realwhereareyoufromQ():
   America_or_nah=raw_input("Are you from the United states?\n")
@@ -58,9 +60,9 @@ def realwhereareyoufromQ():
     noNumbers=Input_Checker(Country)
     counter=0
     if noNumbers==False:
-      print "%s not a valid country. Please enter a valid one \n " % country
-      new_country= raw_input("Test:What country are you from? ")
-      retval=realwhereareyoufrom("N","N/A", new_country)
+      print "%s not a valid country. Please enter a valid one \n " % Country
+      retval=realwhereareyoufrom()
+      print retval
       return retval
     else:
       for i in range(len(Country)):
@@ -86,5 +88,4 @@ def realwhereareyoufromQ():
         ans=uniform(.0,.3)
         print ans 
         return 
-          
 realwhereareyoufromQ()
