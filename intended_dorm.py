@@ -26,10 +26,12 @@ def intended_dorm():
   # This while loops keeps running until the user gives a valid input.
   valid_input = False
   while valid_input == False:
-    dorm = raw_input("Where will you be living?")
+    dorm = raw_input("Where will you be living? \n")
     valid_input = Input_Checker(dorm)
     dorm = dorm.lower()
-    
+  print "\n"
+  for i in range(4):
+    print "Calculating Value...\n"  
   # The bounds of psuedo-randomness are 0 and .1.
   # The for-loops checks for whether the user's input matches any of the dorms names.
   # As the check moves to the next 'dorm_building', the bounds of randomness are shifted by the variable "increment"
@@ -41,11 +43,12 @@ def intended_dorm():
   for dorm_building in master_dorm_list:
     for dorm_name in dorm_building:
       if dorm == dorm_name:
-        return uniform(lower_bound,higher_bound)
+        ans=uniform(lower_bound,higher_bound)
+        print "Value Generated: " + str(ans)
+        return  ans
       else:
         lower_bound =  lower_bound + increment
         higher_bound = higher_bound + increment
-        
 intended_dorm()
   #   # Code from a previous way of returning a psuedo-random value: Don't want to delte because it is annoying to type    
   #   if dorm == a in dorm:
