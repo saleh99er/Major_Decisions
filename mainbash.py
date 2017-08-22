@@ -15,14 +15,9 @@ def mainbash():
                    "Science of Earth Systems","Information Science",
                    "Archaeology","Sociology","Italian","Biology & Society",
                    "Asian Studies","History of Art"]
-  # is_US=raw_input("Are you from the United states?")
-  # State= raw_input("Is applicable, what state are you from")
-  # Country=raw_input("What country are you from")
-  # major=raw_input("What is you intended major")
-  # dorm= raw_input("Where will you be living?")
   q1 = intended_dorm()
   q2 = intendedMajorQ()
   q3 = realwhereareyoufromQ()
   ans = int((q1+q2+q3)*(len(list_of_AS_majors)-1))
   print list_of_AS_majors[ans]
-value=mainbash()
+  mainbash()
