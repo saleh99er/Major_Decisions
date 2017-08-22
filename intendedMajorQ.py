@@ -1,14 +1,17 @@
 from random import uniform
-def intendedMajorQ(major):
-  #The function "Input_Checker" checks if there is a number(string) wihtin the input. 
+from Input_Checker import Input_Checker 
+def intendedMajorQ():
+  #The function "Input_Checker" checks if there is a number(string) wihtin the input.
+  major=raw_input("What is your intended Major? \n")
   noNumbers=Input_Checker(major)
   if noNumbers==True:
     #A value between 0 and .6 will be generated
     validInput=len(major)
-    print "DEBUG: this is a valid major, calculating"
+    for i in range(4):
+      print "Calculating Value...\n" 
   else:
     print "This is not a valid major. Please enter a valid one."
-    valid_major=raw_input("What is your intended Major? ")
+    valid_major=raw_input("What is your intended Major? \n")
     validInput = intendedMajorQ(valid_major)
     return validInput
   if validInput < 3:
@@ -25,4 +28,4 @@ def intendedMajorQ(major):
   else:
     output= uniform(.2,.3)
     return output
-  
+intendedMajorQ()
