@@ -39,8 +39,8 @@ def intended_dorm():
           is_dorm_name_in_list=True
     if is_dorm_name_in_list==False:
       print "This is not a valid dorm name. Please enter one."
-  for i in range(4):
-    print "Calculating Value...\n"  
+  # for i in range(4):
+  #   print "Calculating Value...\n"
   # The bounds of psuedo-randomness are 0 and .1.
   # The for-loops checks for whether the user's input matches any of the dorms names.
   # As the check moves to the next 'dorm_building', the bounds of randomness are shifted by the variable "increment"

@@ -25,8 +25,8 @@ def realwhereareyoufromQ():
       noNumbers=Input_Checker(State)
       if noNumbers==False:
         print "%s not a valid state. Please enter a valid one \n " % State
-    for i in range(4):
-      print "Calculating Value...\n" 
+    # for i in range(4):
+    #   print "Calculating Value...\n"
     counter=0
     for i in range(len(State)):
       if State[i]=="a":
@@ -57,8 +57,8 @@ def realwhereareyoufromQ():
     while noNumbers==False:
       Country=raw_input("What country are you from? \n")
       noNumbers=Input_Checker(Country)
-    for i in range(4):
-      print "Calculating Value...\n" 
+    # for i in range(4):
+    #   print "Calculating Value...\n"
     counter=0
     for i in range(len(Country)):
       if Country[i]=="a":
@@ -82,5 +82,6 @@ def realwhereareyoufromQ():
     else:
       ans=uniform(.0,.3)
       print ans 
-      return 
+      return ans
+
 realwhereareyoufromQ()

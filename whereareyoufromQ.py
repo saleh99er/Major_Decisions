@@ -1,7 +1,4 @@
 def whereareyoufromQ():
-  #THE REASON WHY I ADDED COMMENTS FOR WHAT I SHOULD DO INSTEAD OF JUST DOING IT IS BECAUSE I NEED TO MAKE SURE WERE ON THE SAME PAGE ESPECIALLY SINCE YOUR'RE DOING THE GUI
-    #NOT YELLING JUST THOUGHT THAT THIS IS IMPORTANT TO READ
-  
   #At the get-go, we are going to determine whether the user is from America or not.
   #v I love this variable
   America_or_nah=raw_input("Do you come from a state in America? (Y/N): ")
@@ -58,14 +55,6 @@ def whereareyoufromQ():
       retval=whereareyoufromQ()
       return retval
     else:
-      #No reason why I picked 4, I'm not a racist and/or islonationist.
-      #^^ Not for you Saleh or Atsutse.
-      #Just wrote that for the one person who finds a way to be offended by the fact that I was being lazy and didn't want to find a line of code to accoomate that fact. 
-      # I'm planning to keep this comment within the code as a disclaimmer that "The Sleep is Not tommorrow Group are not racist and/or have islonationist beliefs."
-        #Just in case. 
-      # You know what? If we decide to have the return value euqal the number "a"'s or some letter in string, I'll do it for this as well. 
-        #Then if the return value is greater than some value (which is to be decided), I'll then return a "Back_up_value" instead
-      #What do you think?
       retval= 4
     return retval
   else:
