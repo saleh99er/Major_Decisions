@@ -28,8 +28,17 @@ def intended_dorm():
   while valid_input == False:
     dorm = raw_input("Where will you be living? \n")
     valid_input = Input_Checker(dorm)
-    dorm = dorm.lower()
-  print "\n"
+    if valid_input==False:
+       print "%s is not a valid dorm. Please enter again. \n " % dorm 
+    else: dorm = dorm.lower()
+    is_dorm_name_in_list=False
+  while is_dorm_name_in_list==False: 
+    for dorm_building in master_dorm_list:
+      for dorm in dorm_building:
+        if dorm in dorm_building:
+          is_dorm_name_in_list=True
+    if is_dorm_name_in_list==False:
+      print "This is not a valid dorm name. Please enter one."
   for i in range(4):
     print "Calculating Value...\n"  
   # The bounds of psuedo-randomness are 0 and .1.
@@ -45,41 +54,8 @@ def intended_dorm():
       if dorm == dorm_name:
         ans=uniform(lower_bound,higher_bound)
         print "Value Generated: " + str(ans)
-        return  ans
+        return ans
       else:
         lower_bound =  lower_bound + increment
         higher_bound = higher_bound + increment
 intended_dorm()
-  #   # Code from a previous way of returning a psuedo-random value: Don't want to delte because it is annoying to type    
-  #   if dorm == a in dorm:
-  #     return 
-  #     valid_input = True
-  #   elif dorm == b in dorm:
-  #     return random()*.3
-  #     valid_input = True
-  #   elif dorm == c in dorm:
-  #     return random()*.3
-  #     valid_input = True
-  #   elif dorm == d in dorm:
-  #     return random()*.3
-  #     valid_input = True
-  #   elif dorm == e in dorm:
-  #     return random()*.3
-  #     valid_input = True
-  #   elif dorm == f in dorm:
-  #     return random()*.3
-  #     valid_input = True
-  #   elif dorm == g in dorm:
-  #     return random()*.3
-  #     valid_input = True
-  #   elif dorm == h in dorm:
-  #     return random()*.3
-  #     valid_input = True
-  #   elif dorm == i in dorm:
-  #     return random()*.3
-  #     valid_input = True
-  #   elif dorm == j in dorm:
-  #     return random()*.3
-  #     valid_input = True
-  # else:
-  #   print 'invalid response'
