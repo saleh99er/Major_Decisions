@@ -54,6 +54,10 @@ def press(button): #Change this function later, bugs present, can't access the v
         majorDecisions.gui.stop()
         majorDecisions.nextPage()
         majorDecisions.openWindow()
+    elif button == "Results":
+        majorDecisions.gui.stop()
+        majorDecisions.nextPage()
+        majorDecisions.openWindow()
     elif button == "Try Again?":
         majorDecisions.gui.stop()
         majorDecisions.reset()
@@ -134,31 +138,29 @@ def thirdPage():
 
 
 def fourthPage():
-    a = threading.Thread(target=fourthPagePart1) #calculating...
-    b = threading.Thread(target=fourthPagePart2) #calculation done
-    a.start()
+    #not multithreading anymore, now using built in after in appJar
     waitTime = random.randint(3,15)
+    waitTime = 1 #DEBUG sets wait time to be one second now
     print "DEBUG: waiting " + str(waitTime) + " seconds"
-    time.sleep(waitTime)
-    b.start()
-
-
-def fourthPagePart1():
     majorDecisions.gui = gui()
     app = majorDecisions.gui
     app.startLabelFrame("Calculating")
     app.addLabel('calc','Calculating...\nplease wait')
     print "DEBUG: Calculating..."
     app.stopLabelFrame()
+    app.after(waitTime*100,fourthExpansion)
     app.go()
 
-
-def fourthPagePart2():
-    app = majorDecisions.gui
-    app.addLabel('done','\n\nCalculation done')
-    print "DEBUG: closing fourth page"
     app.addButtons(['Quit','Next'],press) #APP STOPS RESPONDING HERE
 
+def fourthExpansion():
+    app = majorDecisions.gui
+    app.stop()
+    majorDecisions.gui = gui()
+    app.addLabel('done','\n\nCalculation done')
+    app.go()
+    app.addButtons(['Results'],press)
+    print "DEBUG: closing fourth page"
 
 def fifthPage():
     print 'DEBUG: made it to the fifth page'
