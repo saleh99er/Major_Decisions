@@ -29,4 +29,6 @@ def intendedMajorQ():
   else:
     output= uniform(.2,.3)
     return output
-intendedMajorQ()
+
+if __name__ == "__main__":
+  intendedMajorQ()

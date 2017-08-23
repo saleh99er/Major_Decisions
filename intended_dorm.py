@@ -60,4 +60,6 @@ def intended_dorm():
       else:
         lower_bound =  lower_bound + increment
         higher_bound = higher_bound + increment
-intended_dorm()
+
+if __name__ == "__main__":
+  intended_dorm()

@@ -84,4 +84,5 @@ def realwhereareyoufromQ():
       print ans 
       return ans
 
-realwhereareyoufromQ()
+if __name__ == "__main__":
+  realwhereareyoufromQ()
