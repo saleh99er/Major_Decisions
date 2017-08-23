@@ -28,17 +28,19 @@ def intended_dorm():
   while valid_input == False:
     dorm = raw_input("Where will you be living? \n")
     valid_input = Input_Checker(dorm)
+    print valid_input
     if valid_input==False:
-       print "%s is not a valid dorm. Please enter again. \n " % dorm 
-    else: dorm = dorm.lower()
-    is_dorm_name_in_list=False
-  while is_dorm_name_in_list==False: 
-    for dorm_building in master_dorm_list:
-      for dorm in dorm_building:
-        if dorm in dorm_building:
-          is_dorm_name_in_list=True
-    if is_dorm_name_in_list==False:
-      print "This is not a valid dorm name. Please enter one."
+       print "%s is not a valid dorm. Please enter again. \n " % dorm
+    else:
+      dorm = dorm.lower()
+      #is_dorm_name_in_list=False
+  # while is_dorm_name_in_list==False:
+  #   for dorm_building in master_dorm_list:
+  #     for dorm in dorm_building:
+  #       if dorm in dorm_building:
+  #         is_dorm_name_in_list=True
+  #   if is_dorm_name_in_list==False:
+  #     print "This is not a valid dorm name. Please enter one."
   # for i in range(4):
   #   print "Calculating Value...\n"
   # The bounds of psuedo-randomness are 0 and .1.

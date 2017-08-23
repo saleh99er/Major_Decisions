@@ -18,9 +18,9 @@ def mainbash():
   q1 = intended_dorm()
   q2 = intendedMajorQ()
   q3 = realwhereareyoufromQ()
-  quotient_factor = q1+q2+q3
+  quotient_factor = q1+q2+q3gitgit
 
   print "quotient_factor: " +str(quotient_factor)  
   ans= quotient_factor*((len(list_of_AS_majors)-1))
   print list_of_AS_majors[ans]
-  mainbash()
+mainbash()
