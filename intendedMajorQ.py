@@ -3,6 +3,7 @@ from Input_Checker import Input_Checker
 def intendedMajorQ():
   #The function "Input_Checker" checks if there is a number(string) wihtin the input.
   major=raw_input("What is your intended Major? \n")
+  #WHY WHILE LOOPS WHY 
   noNumbers=Input_Checker(major)
   if noNumbers==True:
     #A value between 0 and .6 will be generated
