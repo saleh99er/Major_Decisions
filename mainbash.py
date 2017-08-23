@@ -7,10 +7,13 @@ def mainbash():
   q1 = intended_dorm()
   q2 = intendedMajorQ()
   q3 = realwhereareyoufromQ()
-  quotient_factor = q1+q2+q3gitgit
+  quotient_factor = q1+q2+q3
 
   print "quotient_factor: " +str(quotient_factor)  
   ans= quotient_factor*((len(list_of_AS_majors)-1))
+  #the answer needs to be casted to an int
+  ans = int(ans)
+  print ans
   print list_of_AS_majors[ans]
 
 #inserted this for all functions that run or have test cases so when you import a module it will not run but
