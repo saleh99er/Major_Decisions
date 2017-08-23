@@ -1,7 +1,9 @@
 from random import uniform
 from random import random
 from Input_Checker import Input_Checker 
-def intended_dorm():
+def intended_dorm(dorm_input):
+  THESE LIST VARIABLES (ALL OF THEM) SHOULD TECHNICALLY BE IN ALL CAPS BECAUSE THEY ARE CONSTANTS, PLEASE MAKE THAT CHANGE BUT IT IS NOT IMPORTANT
+  EX. A = ['mews','mews hall']
   a = ['mews','mews hall']
   b = ['townhouse','townhouse community']
   c = ['balch','balch hall']
@@ -24,25 +26,9 @@ def intended_dorm():
   master_dorm_list=[a,b,c,d,e,g,h,i,j,k,l,m,n,o,p,q,r,s]
   
   # This while loops keeps running until the user gives a valid input.
-  valid_input = False
-  while valid_input == False:
-    dorm = raw_input("Where will you be living? \n")
-    valid_input = Input_Checker(dorm)
-    print valid_input
-    if valid_input==False:
-       print "%s is not a valid dorm. Please enter again. \n " % dorm
-    else:
-      dorm = dorm.lower()
+
       #is_dorm_name_in_list=False
-  # while is_dorm_name_in_list==False:
-  #   for dorm_building in master_dorm_list:
-  #     for dorm in dorm_building:
-  #       if dorm in dorm_building:
-  #         is_dorm_name_in_list=True
-  #   if is_dorm_name_in_list==False:
-  #     print "This is not a valid dorm name. Please enter one."
-  # for i in range(4):
-  #   print "Calculating Value...\n"
+
   # The bounds of psuedo-randomness are 0 and .1.
   # The for-loops checks for whether the user's input matches any of the dorms names.
   # As the check moves to the next 'dorm_building', the bounds of randomness are shifted by the variable "increment"

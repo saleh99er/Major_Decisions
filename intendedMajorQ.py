@@ -3,6 +3,8 @@ from Input_Checker import Input_Checker
 def intendedMajorQ():
   #The function "Input_Checker" checks if there is a number(string) wihtin the input.
   major=raw_input("What is your intended Major? \n")
+  ^HEY ATSUTSE I NEED THIS RAW INPUT, INPUT CHECKER, AND LOOPS TO RE-ENTER THE DATA OUTSIDE OF THE FUNCTIONS INSTEAD OF INSIDE THE FUNCTION. SO PRETTY MUCH, MOST OF THIS CODE HERE NEEDS TO BE IN MAINBASH AND NOT IN THE FUNCTION.
+  ALSO THE FUNCTIONS SHOULD HAVE PARAMETERS NOW SO WE CAN INSERT VALUES FOR BOTH THE BASH AND THE GUI. I WILL DO intended_dorm.py AS AN EXAMPLE SO YOU CAN DO THE SAME THING FOR THE OTHER FUNCTIONS. THANKS AGAIN DUDE!!
   #WHY WHILE LOOPS WHY 
   noNumbers=Input_Checker(major)
   if noNumbers==True:
