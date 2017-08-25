@@ -1,11 +1,7 @@
 from random import uniform
 from Input_Checker import Input_Checker 
-def intendedMajorQ():
+def intendedMajorQ(major):
   #The function "Input_Checker" checks if there is a number(string) wihtin the input.
-  major=raw_input("What is your intended Major? \n")
-  ^HEY ATSUTSE I NEED THIS RAW INPUT, INPUT CHECKER, AND LOOPS TO RE-ENTER THE DATA OUTSIDE OF THE FUNCTIONS INSTEAD OF INSIDE THE FUNCTION. SO PRETTY MUCH, MOST OF THIS CODE HERE NEEDS TO BE IN MAINBASH AND NOT IN THE FUNCTION.
-  ALSO THE FUNCTIONS SHOULD HAVE PARAMETERS NOW SO WE CAN INSERT VALUES FOR BOTH THE BASH AND THE GUI. I WILL DO intended_dorm.py AS AN EXAMPLE SO YOU CAN DO THE SAME THING FOR THE OTHER FUNCTIONS. THANKS AGAIN DUDE!!
-  #WHY WHILE LOOPS WHY 
   noNumbers=Input_Checker(major)
   if noNumbers==True:
     #A value between 0 and .6 will be generated
@@ -20,13 +16,13 @@ def intendedMajorQ():
   if validInput < 3:
     #This generates a value between 0 and .3
     output = uniform(.0,.1)
-    print "Value Generated: " + str(output)
+    #print "Value Generated: " + str(output)
     return output
   #The length of the shortest known major is 3 and the length of the largest known major is 28
   elif validInput >=3 and validInput <= 28:
    #Generates a value between 0.0 and 
     output = uniform(.0,.4)
-    print "Value Generated: " + str(output)
+    #print "Value Generated: " + str(output)
     return output
   else:
     output= uniform(.2,.3)
