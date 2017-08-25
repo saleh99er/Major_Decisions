@@ -19,12 +19,13 @@ def mainbash():
             print "%s is not a valid dorm name. Please enter again. \n"  %dorm_answer
         else:
             dorm_answer = dorm_answer.lower()
-            valid_input = dorm_checker(dorm_answer) 
+            valid_input = dorm_checker(dorm_answer)
+            print "DEBUG: valid_input is " + str(valid_input)
             if valid_input == False:
                 print "%s is not a valid dorm. Please enter again. \n"  %dorm_answer
-            else:
+            elif valid_input == True:
                 is_dorm_answer_valid = True
-                print "DEBUG: dorm_answer is " + str(is_dorm_answer_valid)
+                #print "DEBUG: dorm_answer is " + str(is_dorm_answer_valid)
     valid_input = False
     while valid_input == False:
         major_answer = raw_input("What is your intended Major? \n")
@@ -38,6 +39,7 @@ def mainbash():
         realwhereareyoufrom_answer = raw_input("Are you from the United states? \n")
         if realwhereareyoufrom_answer in yes_phrases or no_phrases:
             valid_input = True
+            #print "DEBUG: realwhereareyoufrom_answer " + str(realwhereareyoufrom_answer)
         else:
             print "%s is not a valid response, please enter again \n" %realwhereareyoufrom_answer
     q1 = intended_dorm(dorm_answer)
