@@ -1,12 +1,12 @@
 from random import uniform
 from Input_Checker import Input_Checker
-def realwhereareyoufromQ():
-  America_or_nah=raw_input("Are you from the United states?\n")
+yes_phrases = ["Y","Yes","y","yes","YES","YAS","AMERICAAAAAA!!!"]
+no_phrases =  ["N","No","n","no","NO","Nah","Nope"]
+def realwhereareyoufromQ(America_or_nah):
   America_or_nah=America_or_nah.strip()
-  yes_phrases = ["Y","Yes","y","yes","YES","YAS","AMERICAAAAAA!!!"]
-  no_phrases =  ["N","No","n","no","NO","Nah","Nope"]
   is_US=False
   CorrectInput=False
+  
   while CorrectInput== False:
     if America_or_nah in yes_phrases:
       is_US=True
@@ -43,7 +43,7 @@ def realwhereareyoufromQ():
       ans=uniform(.0,.3)
       print ans
       return ans 
-    elif couner==4:
+    elif counter==4:
       ans=uniform(.25,.3)
       print ans 
       return ans 
@@ -65,23 +65,23 @@ def realwhereareyoufromQ():
         counter=counter+1
     if counter==1:
       ans=uniform(.0,.15)
-      print ans
+      #print ans
       return ans 
     elif counter==2:
       ans=uniform(.15,.25)
-      print ans 
+      #print ans 
       return ans 
     elif counter==3:
       ans=uniform(.0,.3)
-      print ans
+      #print ans
       return ans 
     elif counter==4:
       ans=uniform(.25,.3)
-      print ans
+      #print ans
       return ans
     else:
       ans=uniform(.0,.3)
-      print ans 
+      #print ans 
       return ans
 
 if __name__ == "__main__":
