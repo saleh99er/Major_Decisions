@@ -33,23 +33,23 @@ def realwhereareyoufromQ(America_or_nah):
         counter=counter+1
     if counter==1:
       ans=uniform(.0,.15)
-      print ans
+      #print ans
       return ans 
     elif counter==2:
       ans=uniform(.15,.25)
-      print ans
+      #print ans
       return ans 
     elif counter==3:
       ans=uniform(.0,.3)
-      print ans
+      #print ans
       return ans 
     elif counter==4:
       ans=uniform(.25,.3)
-      print ans 
+      #print ans 
       return ans 
     else:
       ans=uniform(.0,.3)
-      print ans
+      #print ans
       return ans
         
   if is_US==False:
