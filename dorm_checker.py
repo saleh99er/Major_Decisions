@@ -1,5 +1,8 @@
-valid_input = False
+
 def dorm_checker(checker):
+    checker = str(checker)
+    valid_input = False
+    counter = 0
     A = ['mews','mews hall']
     B = ['townhouse','townhouse community']
     C = ['balch','balch hall']
@@ -20,8 +23,12 @@ def dorm_checker(checker):
     R = ['ujamaa residential college','uj','ujamaa','the ujamaa residential college']
     S = ['language house','the language house','lh']
     master_dorm_list=[A,B,C,D,E,G,H,I,J,K,L,M,N,O,P,Q,R,S]
-    if  str(checker) in master_dorm_list:
+    for list_value in master_dorm_list:
+        if checker in list_value:
+            counter = counter + 1
+        if counter == 1:
             valid_input = True
+    return valid_input
             #print "valid input is" + str(valid_input)
                 
     
