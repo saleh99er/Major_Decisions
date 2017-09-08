@@ -44,7 +44,7 @@ def mainbash():
                 is_dorm_answer_valid = True
                 #print "DEBUG: dorm_answer is " + str(is_dorm_answer_valid)
                 
-    Atsu_wuz_hur= raw_input("What is your favorite subeject? \n")
+    Atsu_wuz_hur= raw_input("What is your favorite subject? \n")
     #Saleh_wuz_hur= raw_input()
     Shout_out_to_Sleep_is_Not_Due_Tommorrow= raw_input("On a scale from 1 to 10, how much do you like math?\n")
     TseTse_wuz_hur= raw_input("On a scale of 1 to 10, how familiar are you with the majors availiable at Cornell? \n")
