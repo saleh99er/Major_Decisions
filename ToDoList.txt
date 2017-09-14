@@ -1,0 +1,4 @@
+Apply OOP to keep track of data of user's answers to questions
+Find a python-based GUI (that isn't appJar) that's great to work with
+Insert wait time, most likely through multithreading ;)
+Clean up the code (no more silly nicknames, at least not as much)
